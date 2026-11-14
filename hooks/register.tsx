@@ -43,8 +43,8 @@ const { theme, problems } = makeColors({
 
 const LOOK: ThemeSetArgs = {
   colors: theme,
-  // cream ticket-paper panels frosted over the band
-  backdrop: { scene: 'le-petit-orchestre', glass: { blur: 14, opacity: 0.78 } },
+  // cream ticket-paper panels, thin and lightly frosted so the band shows through
+  backdrop: { scene: 'le-petit-orchestre', glass: { blur: 4, opacity: 0.6 } },
 }
 
 export const register: Register = on => {

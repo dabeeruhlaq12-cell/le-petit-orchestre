@@ -11,13 +11,12 @@ const CX = W / 2
 
 // Palette
 const BLUSH = '#F6D6D2'
-const BLUSH_DEEP = '#EDBDB6'
+const ROSE = '#E39A90' // awning stripe: deep enough to read against the blush page
 const CREAM = '#FBF3E4'
 const MUSTARD = '#D9A441'
 const POWDER = '#8FB8C9'
 const MINT = '#9CCFB1' // a touch deeper than the bubble mint so it reads on blush
 const NIGHT = '#2A1E1A'
-const NIGHT_STRIPE = '#3B2B24'
 
 // ---- the awning -----------------------------------------------------------
 // 21 stripes (odd, so one sits dead centre and both halves mirror); each ends in a scallop.
@@ -94,20 +93,20 @@ const soloDelays = SOLOISTS.map((_, i) => `.s${i}{animation-delay:${i * 30 + 12}
 
 const STYLE = `
 .bg{fill:${BLUSH}}
-.aw-a{fill:${BLUSH_DEEP}}
+.aw-a{fill:${ROSE}}
 .aw-b{fill:${CREAM}}
-.awning{opacity:.55}
-.trim{stroke:${MUSTARD};stroke-width:3;stroke-dasharray:2 10;stroke-linecap:round;fill:none;opacity:.7}
-.band{opacity:.15}
+.awning{opacity:1}
+.trim{stroke:${MUSTARD};stroke-width:5;stroke-dasharray:2 12;stroke-linecap:round;fill:none;opacity:1}
+.band{opacity:.55}
 .c-m{fill:${MUSTARD}}
 .c-p{fill:${POWDER}}
 .c-t{fill:${MINT}}
-.veil{fill:${BLUSH};opacity:.35}
+.veil{fill:${BLUSH};opacity:.15}
 .row{animation:bob 2.4s ease-in-out infinite;will-change:transform}
 .off{animation-delay:-1.2s}
 .solo{transform-box:fill-box;transform-origin:50% 100%;animation:hop 180s ease-in-out infinite}
 ${soloDelays}
-@keyframes bob{0%,100%{transform:translateY(-5px)}50%{transform:translateY(5px)}}
+@keyframes bob{0%,100%{transform:translateY(-8px)}50%{transform:translateY(8px)}}
 @keyframes hop{
   0%,96%,100%{transform:translate(0,0) rotate(0)}
   96.6%{transform:translate(0,-34px) rotate(-12deg)}
@@ -118,10 +117,10 @@ ${soloDelays}
 }
 @media (prefers-color-scheme: dark){
   .bg{fill:${NIGHT}}
-  .aw-a{fill:${NIGHT_STRIPE}}
-  .aw-b{fill:#4A372E}
+  .aw-a{fill:#7A3F3A}
+  .aw-b{fill:#5A4238}
   .veil{fill:${NIGHT}}
-  .band{opacity:.18}
+  .band{opacity:.6}
 }
 @media (prefers-reduced-motion: reduce){
   .row,.solo{animation:none}
