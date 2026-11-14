@@ -1,0 +1,5 @@
+{
+  "name": "le-petit-orchestre",
+  "owner": { "name": "Le Petit Orchestre" },
+  "plugins": [{ "name": "le-petit-orchestre", "source": "./" }]
+}
