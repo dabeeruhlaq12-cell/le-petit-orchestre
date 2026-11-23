@@ -27,3 +27,7 @@ claude plugin install le-petit-orchestre --marketplace dabeeruhlaq12-cell/le-pet
 In the desktop app, where `/plugin` does not run: click **+** next to the prompt box, then **Plugins**, **Add marketplace** with `dabeeruhlaq12-cell/le-petit-orchestre`, then **Add plugin**.
 
 The theme draws in the desktop and mobile apps; terminal sessions keep their own look.
+
+## License
+
+MIT. See [LICENSE](LICENSE). Made by Dabeer Ul Haq with Claude Code; commits written by the AI are attributed to it in the history.
